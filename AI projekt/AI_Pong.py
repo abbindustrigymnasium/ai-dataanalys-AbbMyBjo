@@ -4,6 +4,11 @@ import sys
 import math
 import random
 
+
+# 1 smart AI och 1 dum AI som spelar mot varandra och lär sig
+# https://www.youtube.com/watch?v=BSpXCRTOLJA
+
+
 # Formatera bakgrund m.m.
 backgroundColor = (201, 255, 229)
 width, height = 500, 600

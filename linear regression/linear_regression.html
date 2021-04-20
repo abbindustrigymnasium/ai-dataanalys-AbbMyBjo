@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    
+     <form id="" action="">
+      Storlek i kvadratmeter:<br />
+      <input id="Size" type="number" name="Size" value="59" />
+      <br />
+      Riktigt pris:<br />
+      <input id="Price" type="number" name="Price" value="1300000" />
+      <br /><br />
+      <button type="button" name="submit" onclick="Newdata();return false;">
+        Räkna ut!
+      </button>
+    </form>
+
+    <h2>Log:</h2>
+    <p id="logger"></p>
+    
+    <script src="sketch.js"></script>
+  </body>
+</html>

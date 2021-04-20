@@ -5,7 +5,7 @@ pygame.init()
 backgroundColor = (201, 255, 229)
 screen = pygame.display.set_mode((500, 500))
 screen.fill(backgroundColor)
-button = pygame.Rect(225, 270, 50, 30)
+button = pygame.draw.rect(screen, (0, 0, 0), (225, 270, 250, 250))
 done = False
 while True:
     while not done:
@@ -19,5 +19,5 @@ while True:
                         # `event.pos` is the mouse position.
                     if button.collidepoint(event.pos):
                             # Increment the number.
-                        break
+                        pygame.QUIT()
         pygame.display.flip()

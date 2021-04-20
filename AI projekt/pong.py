@@ -119,7 +119,11 @@ while main:
         # Om den krockar med vänster padel
         if circlePosX == 50:
             if circlePosY >= paddlePosY-5 and circlePosY <= paddlePosY+55:
-                diffX = -diffX  # olika vinklar här
+                diffX = -diffX
+                
+# ------------------------------------------ #
+                # olika vinklar här
+# ------------------------------------------ #
 
         # Höger padel
         elif circlePosX == 450:

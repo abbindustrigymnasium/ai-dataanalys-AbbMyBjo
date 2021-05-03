@@ -23,6 +23,8 @@ game = True
 
 pygame.init() # Starta pygame
 
+values = []
+
 # jokerman/cooperblack(badboll), gigi(fantasy), Chopsic.ttf(space), nes(standard)
 font = pygame.font.SysFont("nes", 60)
 btnFont = pygame.font.SysFont("nes", 30)
@@ -46,6 +48,8 @@ while main:
     circlePosY = 250 + random.randint(-100, 100)
     diffX = 0.5
     diffY = 0.5
+    values.insert(0, circlePosX)
+    values.insert(1, circlePosY) # räkna ut delta Y och delta X för att räkna ut grejer med AI med hjälp av lista med gamla värden och nya värden på x o y för bollen
 
     while game:
         screen.fill(backgroundColor)

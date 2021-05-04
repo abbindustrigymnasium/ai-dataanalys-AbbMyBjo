@@ -3,6 +3,7 @@ from pygame.locals import *
 import sys
 import math
 import random 
+import csv
 
 # Formatera bakgrund m.m.
 backgroundColor = (201,255,229)
@@ -48,8 +49,11 @@ while main:
     circlePosY = 250 + random.randint(-100, 100)
     diffX = 0.5
     diffY = 0.5
+    dX = 0
+    dY = 0
     values.insert(0, circlePosX)
     values.insert(1, circlePosY) # räkna ut delta Y och delta X för att räkna ut grejer med AI med hjälp av lista med gamla värden och nya värden på x o y för bollen
+    time = 500
 
     while game:
         screen.fill(backgroundColor)
@@ -65,7 +69,7 @@ while main:
 
         ball = Ball(Color, 5, 5)
 
-        clock.tick(500) # Timer för att sakta ner spelet
+        clock.tick(time) # Timer för att sakta ner spelet
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -143,12 +147,27 @@ while main:
                     playerPoints += 1
                 game = False
             #skriv ut game over över skärmen och avsluta spelet
-        
+
         # Addera skillnader till bollens koordinater för förflyttning
+        values.insert(0, circlePosX)
+        values.insert(1, circlePosY)
+
         circlePosX += diffX
         circlePosY += diffY
+
+        if diffY < 0:
+            dX = values[0]-circlePosX
+            dY = values[1]-circlePosY
+
+        with open('AI_values.csv', mode='w') as AI_values:
+            value_writer = csv.writer(AI_values, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            value_writer.writerow([circlePosX, circlePosY, values[0], values[1], dX, dY])
+
         paddlePosY += direction
+        time += 1 #bollen åker snabbare ju längre in i spelet vi kommer
         pygame.display.flip()
+
+        # spara värden i csv fil 
 
     # Om någon vunnit skriv ut det till player1
     if AIpoints == 5 or playerPoints == 5:

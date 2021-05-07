@@ -1,7 +1,11 @@
 import cv2
 
+face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'xml.xml')
+
 # Load the cascade
-face_cascade = cv2.CascadeClassifier('xml.xml')
+
+# face_cascade = cv2.CascadeClassifier('xml.xml')
+
 # Read the input image
 img = cv2.imread('test2.png')
 # Convert into grayscale
@@ -14,3 +18,4 @@ for (x, y, w, h) in faces:
 # Display the output
 cv2.imshow('img', img)
 cv2.waitKey()
+

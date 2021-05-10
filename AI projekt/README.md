@@ -1,4 +1,4 @@
-# **Pong: lätt AI vs smart AI**
+# **Pong: dum AI vs smart AI**
 
 <img src="https://github.com/abbindustrigymnasium/ai-dataanalys-AbbMyBjo/blob/main/AI%20projekt/Screenshot%20(13).png" alt="Pong" width="300"/>
 

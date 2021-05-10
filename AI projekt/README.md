@@ -12,6 +12,8 @@ Slutprodukten ska vara en AI som spelar mot en "dum AI". Den dumma AI:n följer 
 
 Den "smarta" AI:n lär sig spelet med hjälp av ett neuralt nätverk och 200 000 rader testdata att analysera. Det neurala nätverket ska ge en output på 1 eller 0 vilket kommer avgöra om padeln går uppåt eller nedåt.
 
+För att skapa pong-miljön m.m. har jag tagit hjälp av en tutorial: https://www.101computing.net/pong-tutorial-using-pygame-getting-started/ och för själva AI:n har jag tagit hjälp av en youtube-video: https://www.youtube.com/watch?v=BSpXCRTOLJA&t=575s.
+
 Lite mer om filerna som finns med i min github:
 
 träningsvärden.py är till för att generera datat som det neurala nätverket ska träna med.

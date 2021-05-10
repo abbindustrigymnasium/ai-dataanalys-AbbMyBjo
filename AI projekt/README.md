@@ -10,3 +10,9 @@ För att stänga av spelet trycker man på tangenten "Q". När AI:n inte är akt
 Slutprodukten ska vara en AI som spelar mot en "dum AI". Den dumma AI:n följer bollens rörelser med hjälp av tre rader kod. Om bollen går uppåt gör också padeln det, samma om bollen går nedåt.
 
 Den "smarta" AI:n lär sig spelet med hjälp av ett neuralt nätverk och 200 000 rader testdata att analysera. Det neurala nätverket ska ge en output på 1 eller 0 vilket kommer avgöra om padeln går uppåt eller nedåt.
+
+Lite mer om filerna som jag använt:
+
+träningsvärden.py är till för att generera datat som det neurala nätverket ska träna med.
+Pong.py är den huvudsakliga filen där den dumma AI:n och en spelare kan spela mot varandra. Där ska också den smarta AI:n spela när den är klar, istället för spelaren. Slutligen ska man kunna spela mot den smarta AI:n, när den har lärt sig tillräckligt bra om hur man spelar. 
+AI_pong.py är till för att träna den smarta AI:n så att den blir bra nog. Man väver sedan ihop denna fil med pong.py.

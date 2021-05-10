@@ -1,6 +1,7 @@
 # **Pong: lätt AI vs smart AI**
 
 Jag har gjort spelet pong i python. Det jag började med var att bygga upp hela miljön för spelet för att ha något att utgå från när jag skulle lära min AI att spela.
+För att stänga av spelet trycker man på tangenten "Q". När AI:n inte är aktiverad styr man padeln med antingen pil upp och pil ned eller "W" och "S". Den som når 5 poäng först vinner spelet. Poäng får man om motståndaren missar bollen och den går vidare in i väggen bakom padeln.
 
 Slutprodukten ska vara en AI som spelar mot en "dum AI". Den dumma AI:n följer bollens rörelser med hjälp av tre rader kod. Om bollen går uppåt gör också padeln det, samma om bollen går nedåt.
 
